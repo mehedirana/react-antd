@@ -1,0 +1,2 @@
+export const SET_ROLE_TYPE = 'SET_ROLE_TYPE'
+export const REMOVE_ROLE_TYPE = 'REMOVE_ROLE_TYPE'
