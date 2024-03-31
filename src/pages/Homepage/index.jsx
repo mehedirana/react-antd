@@ -13,8 +13,8 @@ const HomePage = () => {
             </Space>
             <Title {...subTitle} level={3}>Are you a Student or Teacher ?</Title>
             <Space {...buttonSection}>
-                <Button {...button} type="primary">Student</Button>
-                <Button {...button} type="primary">Teacher</Button>
+                <Button {...button}>Student</Button>
+                <Button {...button}>Teacher</Button>
             </Space>
 
         </div>

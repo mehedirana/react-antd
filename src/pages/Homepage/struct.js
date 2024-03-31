@@ -17,7 +17,7 @@ export const titleOne = {
     style: {
         color: '#0E6250',
         fontFamily: 'Rubik',
-        fontSize: '54.585px',
+        fontSize: 54,
         fontStyle: 'normal',
         fontWeight: 500,
 
@@ -27,7 +27,7 @@ export const titleTwo = {
     style: {
         color: '#1F518A',
         fontFamily: 'Rubik',
-        fontSize: '54.585px',
+        fontSize: 54,
         fontStyle: 'normal',
         fontWeight: 500,
 
@@ -46,8 +46,14 @@ export const titleSection = {
     }
 }
 
-export const button ={
-    style:{
-       
+export const button = {
+    style: {
+        borderRadius: '8px',
+        background: '#1886FE',
+        color: '#FFF',
+        fontFamily: 'Inter',
+        fontSize: '18px',
+        fontWeight: 500,
+        padding: '0px 50px'
     }
 }
