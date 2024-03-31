@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import Teacher from './pages/Teacher';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import CustomLayout from './pages/Layout';
 
 function App() {
   return (
@@ -12,6 +13,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<HomePage />} />
+          <Route
+            exact
+            path='/home'
+            element={<CustomLayout />}
+          />
           <Route exact path='/login' element={<LoginPage />} />
           <Route exact path='/dashboard' element={<Teacher />} />
         </Routes>
