@@ -4,7 +4,7 @@ import { logoStruct, headlineStruct } from './struct';
 
 import IUBImg from './images/iub.png';
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 const { logoSection, logo } = logoStruct;
 const { headlineSection, headline } = headlineStruct;
 
@@ -24,7 +24,7 @@ export const BrandLogo = () => {
 export const BrandHeadline = () => {
     return (
       <Flex {...headlineSection}>
-        <Title {...headline}>LAB MASTER</Title>
+        <Text {...headline}>LAB MASTER</Text>
       </Flex>
     );
   };

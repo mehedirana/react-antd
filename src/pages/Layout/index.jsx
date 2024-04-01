@@ -1,13 +1,13 @@
 import React from 'react'
-import { Layout, Menu, message, Button, Flex, Skeleton, Input, Avatar } from 'antd';
-import { headerStruct, headerStyle, layoutStruct, siderStruct } from './struct';
+import { Layout, Menu, Flex,  Input, Avatar } from 'antd';
+import { headerStruct, layoutStruct, siderStruct } from './struct';
 import { BrandHeadline, BrandLogo } from '../../components/Brand';
 import * as AntdIcons from '@ant-design/icons';
 
-const { Header, Sider, Content } = Layout;
+const { Header, Sider } = Layout;
 const { Search } = Input;
 
-const { header, actions } = headerStruct;
+const { header } = headerStruct;
 
 const CustomLayout = () => {
 
@@ -36,21 +36,18 @@ const CustomLayout = () => {
 
     return (
         <Layout {...layoutStruct}>
-            <Header style={{background:'#FFF' }}>
+            <Header style={{ background: '#FFF' }}>
                 <Flex {...header}>
                     <BrandHeadline />
-                    <Flex {...actions}>
                         <Search
-                            placeholder="input search text"
+                            placeholder="Search Anything...."
                             // onSearch={onSearch} 
-                            style={{ width: 400 }}
+                            style={{ width: '50%' }}
                         />
-                        <Avatar size={64} icon={<AntdIcons.UserOutlined />} />
-                    </Flex>
+                        <Avatar size={50} icon={<AntdIcons.UserOutlined />} />
                 </Flex>
             </Header>
             <Layout>
-
                 <Sider {...siderStruct}>
                     <BrandLogo />
 

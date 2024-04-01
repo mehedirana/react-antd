@@ -31,6 +31,10 @@ export const headerStruct = {
     gap: "middle",
     justify: "space-between",
     align: "center",
+    backgroundColor: '#4096ff',
+    style:{
+      marginTop:'7px'
+    }
   },
   actions: {
     gap: "middle",
