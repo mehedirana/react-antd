@@ -41,3 +41,10 @@ export const headerStruct = {
     wrap: "wrap",
   },
 };
+
+export const contentStruct = {
+  style: {
+    margin: "24px 24px",
+    minHeight: 280,
+  },
+};

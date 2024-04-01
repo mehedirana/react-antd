@@ -13,13 +13,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/login' element={<LoginPage />} />
           <Route
             exact
             path='/home'
             element={<CustomLayout />}
           />
-          <Route exact path='/login' element={<LoginPage />} />
-          <Route exact path='/dashboard' element={<Teacher />} />
+          <Route
+            exact
+            path='/:path'
+            element={<CustomLayout />}
+          />
+          {/* <Route exact path='/dashboard' element={<Teacher />} /> */}
         </Routes>
       </BrowserRouter>
     </Provider>
