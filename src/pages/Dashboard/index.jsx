@@ -21,30 +21,6 @@ const Dashboard = () => {
       };
 
     return (
-        // <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-        //     <Space direction='vertical' style={{}}  >
-        //         <Text {...header}>Upcoming LAB Class</Text>
-        //         <Card style={{ background: '#E3F5FF', padding:'30px', minWidth:400 }}>
-        //             <Space direction='vertical' >
-        //                 <Text>Attendance</Text>
-        //                 <br/>
-        //                 <div style={{justifyContent:'space-between', display:'flex'}}>
-        //                     <Text>2.9K</Text>
-        //                     <Space direction='vertical'>
-        //                         <Text>27%</Text>
-        //                         <Text>Last Month</Text>
-        //                     </Space>
-        //                 </div>
-        //             </Space>
-        //         </Card>
-        //     </Space>
-        //     <Space direction='vertical' style={{}}>
-        //         <Text {...header}>LAB Discussion</Text>
-        //         <Card style={{ background: '#E3F5FF' }}>
-        //             B
-        //         </Card>
-        //     </Space>
-        // </div>
         <Row gutter={16}>
             <Col span={12}>
                 <Card title="Upcoming LAB Class" bordered={false}>
