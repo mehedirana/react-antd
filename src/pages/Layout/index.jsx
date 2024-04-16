@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Layout, Menu, Flex, Input, Avatar } from 'antd';
 import { contentStruct, headerStruct, layoutStruct, siderStruct } from './struct';
 import { BrandHeadline, BrandLogo } from '../../components/Brand';
 import * as AntdIcons from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMenu } from '../../store/menu/menuAction';
-import { useLocation, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import Dashboard from '../Dashboard';
-import Store from '../Store';
+import ResourceStore from '../ResourceStore';
 
 const { Header, Sider, Content } = Layout;
 const { Search } = Input;
@@ -19,9 +19,7 @@ const CustomLayout = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate();
-    const location = useLocation();
 
-console.log(menu);
     const getItem = (label, key, icon, children) => {
         return {
             key,
@@ -54,19 +52,13 @@ console.log(menu);
 
     let toRender = null;
     if(menu?.currentMenuName === 'dashboard') toRender = <Dashboard menu={menu}/> 
-    else if(menu?.currentMenuName === 'store') toRender = <Store menu={menu}/>
+    else if(menu?.currentMenuName === 'resource-store') toRender = <ResourceStore menu={menu}/>
     else if(menu?.currentMenuName === 'store'){}
 
-    //    useEffect(()=>{
-    //       dispatch(selectMenu(
-
-    //       ))
-    //    },[location])
 
     return (
         <Layout {...layoutStruct}>
-            <Header style={{ background: '#FFF' }}>
-                <Flex {...header}>
+            <Header {...header}>
                     <BrandHeadline />
                     <Search
                         placeholder="Search Anything...."
@@ -74,7 +66,6 @@ console.log(menu);
                         style={{ width: '50%' }}
                     />
                     <Avatar size={50} icon={<AntdIcons.UserOutlined />} />
-                </Flex>
             </Header>
             <Layout>
                 <Sider {...siderStruct}>

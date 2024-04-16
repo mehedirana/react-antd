@@ -27,13 +27,17 @@ export const headerStyle = {
 
 export const headerStruct = {
   header: {
-    wrap: "wrap",
-    gap: "middle",
-    justify: "space-between",
-    align: "center",
-    backgroundColor: '#4096ff',
     style:{
-      marginTop:'7px'
+      display:'flex',
+      justifyContent:'space-between',
+      alignItems:'center',
+      backgroundColor:'#fff',
+      minHeight:100,
+      flexWrap:'wrap',
+      position:'sticky',
+      top:0,
+      zIndex:999,
+      boxShadow: "8px 8px 24px -25px rgba(66, 68, 90, 1)"
     }
   },
   actions: {
