@@ -8,6 +8,7 @@ import { selectMenu } from '../../store/menu/menuAction';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from '../Dashboard';
 import ResourceStore from '../ResourceStore';
+import Attendance from '../Attendance';
 
 const { Header, Sider, Content } = Layout;
 const { Search } = Input;
@@ -53,6 +54,7 @@ const CustomLayout = () => {
     let toRender = null;
     if (menu?.currentMenuName === 'dashboard') toRender = <Dashboard menu={menu} />
     else if (menu?.currentMenuName === 'resource-store') toRender = <ResourceStore menu={menu} />
+    else if (menu?.currentMenuName === 'attendance') toRender = <Attendance menu={menu} />
     else if (menu?.currentMenuName === 'store') { }
 
 
