@@ -1,23 +1,29 @@
 import React from 'react';
-import { Space, Table, Tag } from 'antd';
+import { Space, Tag } from 'antd';
 
 export const TableCol =()=>{
  return [
     {
-        title: 'Name',
+        title: 'Student ID',
+        dataIndex: 'id',
+        key: 'id',
+        render: (text) => <a>{text}</a>,
+      },
+    {
+        title: 'Student Name',
         dataIndex: 'name',
         key: 'name',
         render: (text) => <a>{text}</a>,
       },
       {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
+        title: 'Department',
+        dataIndex: 'department',
+        key: 'department',
       },
       {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
+        title: 'Approval Date',
+        dataIndex: 'date',
+        key: 'date',
       },
       {
         title: 'Tags',
@@ -26,8 +32,8 @@ export const TableCol =()=>{
         render: (_, { tags }) => (
           <>
             {tags.map((tag) => {
-              let color = tag.length > 5 ? 'geekblue' : 'green';
-              if (tag === 'loser') {
+              let color = tag.length > 6 ? 'geekblue' : 'green';
+              if (tag === 'Pending') {
                 color = 'volcano';
               }
               return (
@@ -39,15 +45,15 @@ export const TableCol =()=>{
           </>
         ),
       },
-      {
-        title: 'Action',
-        key: 'action',
-        render: (_, record) => (
-          <Space size="middle">
-            <a>Invite {record.name}</a>
-            <a>Delete</a>
-          </Space>
-        ),
-      }
+    //   {
+    //     title: 'Action',
+    //     key: 'action',
+    //     render: (_, record) => (
+    //       <Space size="middle">
+    //         <a href='/'>Edit {record?.a}</a>
+    //         <a href='/'>Delete</a>
+    //       </Space>
+    //     ),
+    //   }
  ]   
 }
